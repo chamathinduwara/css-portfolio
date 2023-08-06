@@ -1,8 +1,15 @@
+import { Box, Stack } from "@mui/material";
+import Container from "../Container";
+import NavBar from "../NavBar";
+
 const Layout = () => {
   return (
-    <>
-      <h1>Hello World</h1>
-    </>
+    <Box>
+      <Stack direction="column" justifyContent={"space-between"}>
+        <NavBar />
+        <Container />
+      </Stack>
+    </Box>
   );
 };
 
