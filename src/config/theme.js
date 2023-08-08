@@ -143,7 +143,7 @@ export const themeSetting = (mode) => {
 
                 } : {
                     primary: {
-                        main: colors.primary[900],
+                        main: colors.primary[400],
                     },
                     secondary: {
                         main: colors.greenAccent[500],
@@ -227,12 +227,12 @@ export const ColorModeContaxt = createContext({
 });
 
 export const useMode = () => {
-    const [mode, setMode] = useState("light");
+    const [mode, setMode] = useState("dark");
 
     const colorMode = useMemo(
         () => ({
             toggleColorMode: () =>
-                setMode((prev) => (prev === "dark" ? "light" : "dark"))
+                setMode((prev) => (prev === "light" ? "dark" : "light"))
         }),
         []
     );
